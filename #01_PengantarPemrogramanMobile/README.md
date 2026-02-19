@@ -1,8 +1,8 @@
 # Laporan Praktikum #01 - Pengantar Pemrograman Mobile
 
-Naswanida Nafiula
-SIB 2E / 13
-244107060063
+Naswanida Nafiula <br>
+SIB 2E / 13 <br>
+244107060063 <br>
 
 ---
 
