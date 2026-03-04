@@ -19,6 +19,7 @@ void main() {
 ```
 
 **Jawaban:**
+
 ![Modifikasi Kode](img/maincode.png)
 
 ![Output](img/outputcode.png)
@@ -59,11 +60,13 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan La
 Null Safety adalah fitur Dart yang memastikan variabel tidak bisa bernilai null secara default. Tujuannya untuk mencegah error `Null Pointer Exception` yang sering terjadi di bahasa pemrograman lain. Jika suatu variabel memang perlu bernilai null, maka harus dideklarasikan secara eksplisit dengan menambahkan tanda `?` pada tipe datanya.
 
 **Contoh jika pakai null safety :**
+
 ![Null Safety 1](img/nullSafety1.png)
 ![Null Safety Output 1](img/nullSafetyOutput1.png)
 Kode tersebut berhasil dijalankan karena variabel `name` dideklarasikan dengan tanda `?` (`String? name`) yang menandakan variabel tersebut bersifat nullable. Dart mengizinkan variabel tanpa nilai untuk diakses dan secara otomatis menganggapnya bernilai `null`, sehingga output yang dihasilkan adalah `null` tanpa error.
 
 **Contoh jika tidak pakai null safety :**
+
 ![Null Safety 2](img/nullSafety2.png)
 ![Null Safety Output 2](img/nullSafetyOutput2.png)
 Kode tersebut menghasilkan error `Non-nullable variable 'name' must be assigned before it can be used` karena variabel `name` dideklarasikan sebagai `String` tanpa tanda `?`, yang berarti variabel tersebut bersifat non-nullable. Fitur Null Safety pada Dart mencegah variabel non-nullable diakses sebelum diisi nilai, sehingga program gagal dijalankan.
@@ -72,11 +75,13 @@ Kode tersebut menghasilkan error `Non-nullable variable 'name' must be assigned 
 Late adalah keyword yang digunakan untuk mendeklarasikan variabel non-nullable yang belum bisa diinisialisasi pada saat deklarasi, namun dijamin akan diisi sebelum variabel tersebut diakses. Berbeda dengan nullable (`?`) yang nilai awalnya otomatis null, variabel `late` tidak memiliki nilai apapun hingga secara eksplisit diisi. Jika variabel `late` diakses sebelum diisi, program akan menghasilkan **LateInitializationError**.
 
 **Contoh jika pakai late variabel :**
+
 ![Late Variabel 1](img/lateVariabel1.png)
 ![Late Variabel Output 1](img/lateVariabelOutput1.png)
 Kode tersebut berhasil dijalankan karena variabel `message` dideklarasikan menggunakan keyword `late`, yang memberitahu Dart bahwa variabel akan diisi sebelum digunakan. Meskipun dideklarasikan di luar `void main()` tanpa nilai awal, program tetap berjalan normal dan menghasilkan output `Hello World!`.
 
 **Contoh jika tidak pakai late variabel :**
+
 ![Late Variabel 2](img/lateVariabel2.png)
 ![Late Variabel Output 2](img/lateVariabelOutput2.png)
 Kode tersebut menghasilkan error `Field 'message' should be initialized because its type 'String' doesn't allow null` karena variabel `message` dideklarasikan sebagai `String` biasa tanpa keyword `late`. Dart mengharuskan variabel non-nullable yang dideklarasikan di luar fungsi untuk langsung diinisialisasi dengan nilai, sehingga program gagal dijalankan.
