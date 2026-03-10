@@ -569,6 +569,7 @@ void main () {
   print(record)
 }
 ```
+
 ### Langkah 2:
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
@@ -599,6 +600,7 @@ Tambahkan kode program berikut di luar scope `void main()`, lalu coba eksekusi (
   return (b, a);
 }
 ```
+
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gunakan fungsi `tukar()` di dalam `main()` sehingga tampak jelas proses pertukaran value field di dalam Records.
 
 **Jawab:**
@@ -635,6 +637,7 @@ Tambahkan kode program berikut di dalam scope `void main()`, lalu coba eksekusi 
 (String, int) mahasiswa;
 print(mahasiswa);
 ```
+
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Inisialisasi field nama dan NIM Anda pada variabel record `mahasiswa` di atas.
 
 **Jawab:**
@@ -678,6 +681,7 @@ print(mahasiswa2.a); // Prints 2
 print(mahasiswa2.b); // Prints true
 print(mahasiswa2.$2); // Prints 'last'
 ```
+
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gantilah salah satu isi record dengan nama dan NIM Anda
 
 **Jawab:**
@@ -748,6 +752,7 @@ Outputnya:
 Jenis-jenis parameter di dart:
 
 **a. Required Positional Parameters**
+
 Parameter wajib yang harus diisi saat fungsi dipanggil dan urutannya harus sesuai posisi deklarasi. Jika tidak diisi maka program akan error.
 
 **Contoh:**
@@ -765,6 +770,7 @@ Outputnya:
 ![Contoh 3 a](img/TugasPraktikum/Contoh3A.png)
 
 **b. Optional Positional Parameters**
+
 Parameter opsional yang dibungkus dengan kurung siku `[]`, tidak wajib diisi saat pemanggilan fungsi. Jika tidak diisi, nilainya akan `null` kecuali diberi nilai default menggunakan `=`. Urutan pemanggilan tetap harus sesuai posisi.
 
 **Contoh:**
@@ -783,6 +789,7 @@ Outputnya:
 ![Contoh 3 b](img/TugasPraktikum/Contoh3B.png)
 
 **c. Named Parameters**
+
 Parameter opsional yang dideklarasikan menggunakan kurung kurawal `{}` dan dipanggil dengan menyebutkan nama parameternya. Nilainya `null` secara default jika tidak diisi dan tidak diberi nilai default. Untuk memberi nilai default gunakan `=`. Jika ingin mewajibkan parameter ini diisi, gunakan keyword `required`.
 
 **Contoh:**
@@ -815,6 +822,7 @@ Outputnya:
 ![Contoh 3 c](img/TugasPraktikum/Contoh3C.png)
 
 **d. Required Named Parameters**
+
 Named parameter yang wajib diisi saat pemanggilan fungsi menggunakan keyword `required`. Jika tidak diisi maka analyzer akan melaporkan error.
 
 **Contoh:**
@@ -994,6 +1002,7 @@ Dart tidak mendukung return lebih dari satu nilai secara langsung dari sebuah fu
 **Contoh:**
 
 **Menggunakan List**
+
 Cocok digunakan ketika nilai yang dikembalikan bertipe sama atau urutannya sudah jelas
 
 ```dart
@@ -1013,6 +1022,7 @@ Outputnya:
 ![Contoh 7 List](img/TugasPraktikum/Contoh7List.png)
 
 **Menggunakan Map**
+
 Cocok digunakan ketika nilai yang dikembalikan memiliki nama/key yang jelas sehingga lebih mudah dibaca
 
 ```dart
@@ -1036,6 +1046,7 @@ Outputnya:
 ![Contoh 7 Map](img/TugasPraktikum/Contoh7Map.png)
 
 **Menggunakan Record**
+
 Cara terbaru dan paling direkomendasikan di Dart karena lebih ringkas, type-safe, dan langsung bisa melakukan destructuring pada nilai yang dikembalikan
 
 ```dart
